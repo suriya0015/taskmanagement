@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-agaf%a^+r!)%3)p5eznzzoz3$k17z=i-oiw$9i7_)!*o1l6r$p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'taskmanagement.wsgi.application'
+WSGI_APPLICATION = 'taskmanagement.wsgi.app'
 
 
 # Database
