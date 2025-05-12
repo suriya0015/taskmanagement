@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # or BASE_DIR / 'staticfiles' if using Path
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Application definition
 
