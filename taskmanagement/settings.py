@@ -35,13 +35,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.vercel.app',
 ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# # Vercel app wor
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
-# Application definition
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nonstatic'
@@ -64,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 
 ROOT_URLCONF = 'taskmanagement.urls'
