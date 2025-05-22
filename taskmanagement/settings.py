@@ -27,12 +27,25 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', '.now.sh']
+
+
+STATIC_URL = '/static/'
+
+# Directory where collectstatic will place the output
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Additional locations of static files (your app-level or custom static folder)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Vercel app wor
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # or BASE_DIR / 'staticfiles' if using Path
+# # Vercel app wor
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # or BASE_DIR / 'staticfiles' if using Path
 
 
 # Application definition
