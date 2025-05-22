@@ -19,7 +19,5 @@ python3.9 -m pip install -r requirements.txt
 # collect static files into the staticfiles directory
 python3 manage.py collectstatic --noinput
 
-mkdir -p static
-cp -r staticfiles/* static/
 
 echo "BUILD END"
