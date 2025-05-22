@@ -44,7 +44,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nonstatic',
+    'whitenoise.runserver_nonstatic'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
