@@ -35,19 +35,20 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Additional locations of static files (your app-level or custom static folder)
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.vercel.app',
+]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # # Vercel app wor
 # STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # or BASE_DIR / 'staticfiles' if using Path
-
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 # Application definition
 
 INSTALLED_APPS = [
