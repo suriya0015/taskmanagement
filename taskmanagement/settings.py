@@ -30,14 +30,18 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', '.now.sh']
 
 
 STATIC_URL = '/static/'
-
-# Directory where collectstatic will place the output
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Additional locations of static files (your app-level or custom static folder)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.ManifestStaticFilesStorage",
+    },
+}
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.vercel.app',
@@ -103,11 +107,6 @@ DATABASES = {
     }
 }
 
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
 
 
 # Password validation
